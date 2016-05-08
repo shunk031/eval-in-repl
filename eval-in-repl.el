@@ -134,14 +134,14 @@ Also vertically split the current frame when staring a REPL."
 	  ;; This does not work for python/clojure
 	  (setq name-repl-buffer (buffer-name))
 
-	  ;; REPL on the left (window1)
+	  ;; REPL on the right (window2)
 	  ;; This line is not really necessary because it is already on the left.
-	  (set-window-buffer window1 name-repl-buffer)
-	  ;; Script on the right (window2)
-	  (set-window-buffer window2 name-script-buffer)
+	  (set-window-buffer window2 name-repl-buffer)
+	  ;; Script on the left (window1)
+	  (set-window-buffer window1 name-script-buffer)
 
-	  ;; Select the script window on the right (window2)
-	  (select-window window2)))))
+	  ;; Select the script window on the left (window1)
+	  (select-window window1)))))
 
 
 ;;; eir-send-to-repl
